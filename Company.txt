@@ -1,0 +1,5 @@
+-* Establecer un background para todas las vistas y generar un container blanco que resalte sobre ese fondo. (Agregado background-color: #f3fcff; en el site.css)
+
+* Ver como crear las tablas de DB.
+
+* Ver si se puede agregar Entity Framework / Linq

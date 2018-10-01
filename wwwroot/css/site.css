@@ -3,6 +3,7 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #f3fcff;
 }
 
 /* Wrapping element */
@@ -34,4 +35,28 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: black;                                       /* It doesnt work */
+    box-shadow: 0px 6px 11px 0px rgba(235,238,246,1);
+}
+
+.titles {
+    font-size: 35px;
+    margin-left: 15px;
+}
+
+.boxWhite {
+    background: #ffffff;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
 }

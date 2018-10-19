@@ -7,6 +7,7 @@
 </h1>
 
 <div id="panel-subte">
+    <img hidden id="loading-image" src='/images/loading.gif'/>
     <table id="tabla-subte">
         <thead>
             <th>Linea</th>
@@ -20,6 +21,7 @@
 {
     <script>
     $(document).ready(function(){
+        $('#loading-image').show();
         $.ajax({url: "/Subte/ObtenerEstado", success: function(result){
             $.each(result,function(i, item){
                 var row = "<tr><td>"+ i + "</td><td>" + item.status + "</td><td>" + item.text + "</td></tr>"; 
@@ -27,7 +29,10 @@
                 $("#tabla-subte tbody").append(row);
             });
             
-        }});
+        },
+      complete: function(){
+        $('#loading-image').hide("slow");
+      }});
     });
     </script>
 }

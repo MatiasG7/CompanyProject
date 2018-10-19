@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Estado de Subtes";
+}
+
+<h1>
+    Estado de Subtes
+</h1>
+
+<div id="panel-subte">
+    <table id="tabla-subte">
+        <thead>
+            <th>Linea</th>
+            <th>Estado</th>
+            <th>Detalles</th>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+@section scripts
+{
+    <script>
+    $(document).ready(function(){
+        $.ajax({url: "/Subte/ObtenerEstado", success: function(result){
+            $.each(result,function(i, item){
+                var row = "<tr><td>"+ i + "</td><td>" + item.status + "</td><td>" + item.text + "</td></tr>"; 
+
+                $("#tabla-subte tbody").append(row);
+            });
+            
+        }});
+    });
+    </script>
+}

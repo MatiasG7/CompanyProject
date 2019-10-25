@@ -39,7 +39,7 @@ namespace Proyecto_Personal.Controllers{
                 }
 
             }
-            return StatusCode(400);
+            return StatusCode(HttpStatusCode.BadRequest);
         }
     }
 }

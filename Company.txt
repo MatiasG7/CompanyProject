@@ -3,3 +3,6 @@
 * Ver como crear las tablas de DB.
 
 * Ver si se puede agregar Entity Framework / Linq
+
+* Agregar estado de subtes
+* Integrar con api de transporte publico
